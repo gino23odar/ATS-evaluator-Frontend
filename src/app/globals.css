@@ -3,14 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #F7F7F7;
   --foreground: #171717;
+  --primary: #3f73c2;
+  --secondary: #FEFEFE;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #F7F7F7;
+    --primary: #14458F;
+    --secondary: #FEFEFE;
   }
 }
 
@@ -24,4 +28,63 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffffee;
+}
+
+.parser-section {
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.parser-container {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.parser-section h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.parser-section p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.resume-handler{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin-top: 20px;
+  color: var(--background);
+}
+
+.resume-upload{
+  background-color: var(--foreground);
+}
+
+.ad-upload{
+  background-color: var(--foreground);
 }
