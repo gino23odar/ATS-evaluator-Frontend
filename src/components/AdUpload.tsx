@@ -65,7 +65,7 @@ const AdUpload: React.FC<AdUploadProps> = ({ resumeInfo }) => {
   };
 
   return (
-    <section className="ad-upload flex flex-col md:flex-row p-6">
+    <div className="ad-upload flex flex-col md:flex-row p-6">
       <div className="final-result-section w-full md:w-1/2 p-6" id="finalResultSection">
         <h2 className="text-xl font-semibold mb-4">Suggested Changes</h2>
         <textarea
@@ -121,7 +121,7 @@ const AdUpload: React.FC<AdUploadProps> = ({ resumeInfo }) => {
           </form>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

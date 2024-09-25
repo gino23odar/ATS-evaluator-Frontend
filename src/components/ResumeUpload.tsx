@@ -67,7 +67,7 @@ const ResumeUpload: React.FC<ResumeUploadProps> = ({ setResumeInfo }) => {
   };
 
   return (
-    <section className="resume-upload flex flex-col md:flex-row p-6">
+    <div className="resume-upload flex flex-col md:flex-row p-6">
       <div className="upload-section w-full md:w-[74vw] p-4">
         <p className={`loading-text ${loading ? '' : 'hidden'}`} id="loadingText">
           Loading...
@@ -126,7 +126,7 @@ const ResumeUpload: React.FC<ResumeUploadProps> = ({ setResumeInfo }) => {
         )}
         <p className='text-bold'>Due to Amazon Bedrock discontinuing the foundation Llama 2 Chat models, I had to use the Llama 3 Intruct models, which make the output somewhat more unpredictable, please try a couple times to get the parsing to work.</p>
       </div>
-    </section>
+    </div>
   );
 };
 

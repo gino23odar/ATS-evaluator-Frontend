@@ -8,10 +8,10 @@ const ResumeHandler = () => {
   const [resumeInfo, setResumeInfo] = useState('');
 
   return (
-    <div className='resume-handler flex flex-col gap-8'>
+    <section className='resume-handler flex flex-col gap-8'>
         <ResumeUpload setResumeInfo={setResumeInfo} />
         <AdUpload resumeInfo={resumeInfo} />
-    </div>
+    </section>
   )
 }
 
