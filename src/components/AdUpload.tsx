@@ -66,25 +66,11 @@ const AdUpload: React.FC<AdUploadProps> = ({ resumeInfo }) => {
 
   return (
     <div className="ad-upload flex flex-col md:flex-row p-6">
-      <div className="final-result-section w-full md:w-1/2 p-6" id="finalResultSection">
-        <h2 className="text-xl font-semibold mb-4">Suggested Changes</h2>
-        <textarea
-          id="finalResult"
-          className="result-textarea w-full h-64 border border-gray-300 rounded-lg p-4 resize-none"
-          readOnly
-          value={parsedResult}
-        ></textarea>
-        {errorMessage && (
-          <div id="errorMessage2" className="error-message text-red-500 mt-2">
-            {errorMessage}
-          </div>
-        )}
-      </div>
 
+      <div className="ad-section w-full md:w-[72vw] p-2">
         <p className={`loading-text ${loading ? '' : 'hidden'}`} id="loadingText">
           Loading...
         </p>
-      <div className="ad-section w-full md:w-[72vw] p-2">
         <div className="upload-box2 bg-gray-100 border border-gray-300 rounded-lg p-6">
           <form id="AdUploadForm" encType="multipart/form-data" className="space-y-4" onSubmit={handleSubmit}>
             <label
@@ -120,6 +106,20 @@ const AdUpload: React.FC<AdUploadProps> = ({ resumeInfo }) => {
             </button>
           </form>
         </div>
+      </div>
+      <div className="final-result-section w-full md:w-1/2 p-6" id="finalResultSection">
+        <h2 className="text-xl font-semibold mb-4">Suggested Changes</h2>
+        <textarea
+          id="finalResult"
+          className="result-textarea w-full h-64 border border-gray-300 rounded-lg p-4 resize-none"
+          readOnly
+          value={parsedResult}
+        ></textarea>
+        {errorMessage && (
+          <div id="errorMessage2" className="error-message text-red-500 mt-2">
+            {errorMessage}
+          </div>
+        )}
       </div>
     </div>
   );
