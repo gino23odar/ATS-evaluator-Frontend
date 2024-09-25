@@ -13,7 +13,7 @@ const AdUpload: React.FC<AdUploadProps> = ({ resumeInfo }) => {
   const [parsedResult, setParsedResult] = useState<string>(''); // State for parsed result
   const [errorMessage, setErrorMessage] = useState<string>(''); // State for error messages
   const [loading, setLoading] = useState<boolean>(false); // State for loading
-
+  
   useEffect(() => {
     setResumeData(resumeInfo);
   }, [resumeInfo]);
@@ -88,7 +88,7 @@ const AdUpload: React.FC<AdUploadProps> = ({ resumeInfo }) => {
         <div className="upload-box2 bg-gray-100 border border-gray-300 rounded-lg p-6">
           <form id="AdUploadForm" encType="multipart/form-data" className="space-y-4" onSubmit={handleSubmit}>
             <label
-              htmlFor="AdFileInput"
+                htmlFor="ad-description"
               className="upload-label text-2xl flex flex-col items-center rounded-lg p-6 hover:bg-gray-200"
             >
               <div className="upload-text text-gray-600">Share the Job Post</div>
