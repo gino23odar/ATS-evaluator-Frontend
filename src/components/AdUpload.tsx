@@ -72,9 +72,11 @@ const AdUpload: React.FC<AdUploadProps> = ({ resumeInfo }) => {
     <div className="ad-upload flex flex-col md:flex-row p-6">
 
       <div className="ad-section w-full md:w-[72vw] p-2">
-        <p className={`loading-text ${loading ? '' : 'hidden'}`} id="loadingText">
-          Loading...
-        </p>
+        {loading ? (
+            <p className="loading-text">Loading...</p>
+            ) : (
+            <div>Your components here...</div>
+        )}
         <div className="upload-box2 bg-gray-100 border border-gray-300 rounded-lg p-6">
           <form id="AdUploadForm" encType="multipart/form-data" className="space-y-4" onSubmit={handleSubmit}>
             <label
