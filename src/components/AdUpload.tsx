@@ -81,11 +81,11 @@ const AdUpload: React.FC<AdUploadProps> = ({ resumeInfo }) => {
         )}
       </div>
 
-      <div className="ad-section w-full md:w-[72vw] p-2">
         <p className={`loading-text ${loading ? '' : 'hidden'}`} id="loadingText">
           Loading...
         </p>
-        <div className="upload-box bg-gray-100 border border-gray-300 rounded-lg p-6">
+      <div className="ad-section w-full md:w-[72vw] p-2">
+        <div className="upload-box2 bg-gray-100 border border-gray-300 rounded-lg p-6">
           <form id="AdUploadForm" encType="multipart/form-data" className="space-y-4" onSubmit={handleSubmit}>
             <label
               htmlFor="AdFileInput"
@@ -109,9 +109,9 @@ const AdUpload: React.FC<AdUploadProps> = ({ resumeInfo }) => {
             name="resume-data"
             value={resumeData} // Hidden input will hold the resumeData for form submission
             />
-            <div className="file-name text-sm text-gray-700" id="AdFileName"></div>
+            <div className="file-name2 text-sm text-gray-700" id="AdFileName"></div>
             <button
-              className="parse-button w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors"
+              className="parse-button2 w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors"
               type="submit"
               id="AdSubmitButton"
               disabled={loading}
