@@ -64,6 +64,10 @@ const AdUpload: React.FC<AdUploadProps> = ({ resumeInfo }) => {
     }
   };
 
+  console.log('loading: ', loading);
+  console.log('resume ', resumeData);
+  console.log('ad: ',adDescription);
+
   return (
     <div className="ad-upload flex flex-col md:flex-row p-6">
 
