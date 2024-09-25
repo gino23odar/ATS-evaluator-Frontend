@@ -66,7 +66,7 @@ const AdUpload: React.FC<AdUploadProps> = ({ resumeInfo }) => {
 
   return (
     <div className="ad-upload flex flex-col md:flex-row p-6">
-      <div className="ad-section w-full md:w-[72vw] p-2">
+      <div className="job-section w-full md:w-[72vw] p-2">
         {loading && <p className="loading-text">Loading...</p>}
         <div className="upload-box2 bg-gray-100 border border-gray-300 rounded-lg p-6">
           <form
