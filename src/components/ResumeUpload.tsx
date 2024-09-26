@@ -1,6 +1,8 @@
 'use client'
 import { useState, FormEvent, ChangeEvent } from 'react';
 
+const baseURL = process.env.NEXT_PUBLIC_API_URL;
+
 type ResumeUploadProps = {
     setResumeInfo: React.Dispatch<React.SetStateAction<string>>;
 }
@@ -31,7 +33,7 @@ const ResumeUpload: React.FC<ResumeUploadProps> = ({ setResumeInfo }) => {
 
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:8000/api/upload-resume/', {
+      const response = await fetch(`${baseURL}api/upload-resume/`, {
         method: 'POST',
         body: formData,
       });
